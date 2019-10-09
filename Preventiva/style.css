@@ -1,0 +1,36 @@
+.menuInline{
+	text-transform: uppercase;
+    text-align: right;
+    margin-top: -30px;
+    padding: 5px 5px;
+}
+.menu li a{
+    margin-right: 15px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    border-radius: 2px;
+}
+.menu li a:hover{
+    text-decoration: none;
+    background: #BFEFFF;
+    padding: 5px 2px;
+}
+header{
+	background-color: #6495ED;
+}
+h1{
+	position: fixed;
+	
+	left: 50%;
+	
+	margin-left: -100px;
+}
+.login{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-50px;
+    margin-top: 20px; 
+    
+}
