@@ -1,0 +1,12 @@
+.caixa{
+    position: relative;
+    left: 25%; 
+    width: 50%; 
+    background-color:  rgba(184, 186, 189, 0.562); 
+    border:5px; 
+    border-radius: 10px;
+}
+.formulario{
+    position: relative; 
+    left: 25%;
+}
