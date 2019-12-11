@@ -4,132 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <title>Nota fiscal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-dark" style="background-color: rgba(184, 186, 189, 0.562);">
-            <a class="navbar-brand" href="#">
-                <img class="sticky" src="https://www.assprom.org.br/siten/wp-content/uploads/2015/12/logo_assprom.png"
-                    alt="Logo" style="width: 200px;" scale="0">
-            </a>
-        </nav>
-    </div>
-    <h1 class="text-center">Cadastro de prestação de Serviço</h1>
-    <div class="container form-group" style="margin-top: 60px;">
-        <form action="#">
-            <div>
-                <div class="caixa">
-                    <div class="formulario">
 
-                        <div class="form-group">
-                            <label for="numeroDoc" class="text-center" style="width: 50%;">
-                                <h5>Numero do Documento</h5>
-                            </label>
-                            <input type="number" class="form-control" id="numeroDoc" placeholder="N° do Documento"
-                                style="width: 50%;" required>
-                            <small id="emailHelp" class="form-text text-muted">Digite aqui o numero do
-                                Documento.</small>
+    <nav class="navbar" style="background-color: rgba(197, 197, 201, 0.664); height:80px;">
+        <a class="navbar-brand" href="#">
+            <img class="sticky" src="https://www.assprom.org.br/siten/wp-content/uploads/2015/12/logo_assprom.png" alt="Logo" style="width: 50%;" scale="0">
+        </a>
+
+
+    </nav>
+
+    <h1 class=" text-center">Cadastro de prestação de Serviço</h1>
+    <div class="container main  form-group caixa" style="margin-top: 60px;">
+        <form class="block" action="#">
+            <div class="row justify-content-around block">
+                <div class=" col-md-6 block">
+                    <h5 class="text-center">Numero do Documento</h5>
+                    <input class="caixas form-control" type="number" id="numeroDoc" placeholder="N° do Documento" required>
+                    <small id="emailHelp" class="form-text text-muted "> Digite aqui o numero do
+                        Documento.</small>
+                    <h5 class="text-center">Codigo da Contrante </h5>
+                    <input class="caixas form-control" type="number" id="codContratante" placeholder="Cod da Contratante" required>
+                    <small id="emailHelp" class="form-text text-muted text-center">Digite aqui o Codigo da
+                        Contratante.</small>
+                    <h5 class="text-center">Data de vencimento </h5>
+                    <input type="date" class="caixas form-control" id="dataVencimento" required>
+                </div>
+
+                <div class=" col-md-6 block">
+                    <div class="row">
+                        <div class="col-md-5 coluna">
+                            <h5 class="text-center">Evento </h5>
+                            <select class=" form-control" id="evento">
+                                <option> SERVICOS PRESTADOS</option>
+                                <option> V. TRANSPORTE MENSAL</option>
+                                <option> 13o SALARIO</option>
+                                <option> V. TRANSPORTE AVULSO</option>
+                                <option> SERVICOS PRESTADOS</option>
+                                <option> T. REFEICAO MENSAL</option>
+                                <option> UNIFORME</option>
+                                <option> LANCHE</option>
+                                <option> DESP. REEMBOLSAVEIS</option>
+                                <option> T. REFEICAO AVULSO</option>
+                                <option> SEGURO DE VIDA</option>
+                                <option> UNIFORME PGJ</option>
+                                <option> CESTA BASICA</option>
+                                <option> FERIAS</option>
+                                <option> RESCISAO</option>
+                                <option> T. REF. MENSAL</option>
+                                <option> T. REF. AVULSO</option>
+                                <option> RESCISAO</option>
+                                <option> DEV. MENOR APRENDIZ</option>
+                                <option> AVISO INDENIZADO</option>
+
+                            </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="codContratante"  class="text-center" style="width: 50%;">
-                                <h5>Codigo da Contrante </h5>
-                            </label>
-                            <input type="number" class="form-control" id="codContratante"
-                                placeholder="Cod da Contratante" style="width: 50%;" required>
+                        <div class="col-md-4 coluna">
+                            <h5 class="text-center">Valor </h5>
+                            <input type="text" class=" form-control" id="valor" required><br>
                         </div>
-                        <div class="form-group">
-                            <label for="evento"  class="text-center" style="width: 50%;">
-                                <h5>Evento </h5>
-                            </label>
-                            <div>
-                                <select class=" mb-2 " id="evento" style="width: 50%;">
-                                    <option value="| SERVICOS PRESTADOS">1/ SERVICOS PRESTADOS:</option>
-                                    <option value="| V. TRANSPORTE MENSAL:">2/ V. TRANSPORTE MENSAL:</option>
-                                    <option value="| 13o SALARIO:">3/ 13o SALARIO:</option>
-                                    <option value="| V. TRANSPORTE AVULSO:">4/ V. TRANSPORTE AVULSO: </option>
-                                    <option>5/ SERVICOS PRESTADOS :</option>
-                                    <option>6/ T. REFEICAO MENSAL:</option>
-                                    <option>7/ UNIFORME:</option>
-                                    <option>8/ LANCHE:</option>
-                                    <option>9/ DESP. REEMBOLSAVEIS:</option>
-                                    <option>10/ T. REFEICAO AVULSO:</option>
-                                    <option>11/ SEGURO DE VIDA:</option>
-                                    <option>12/ UNIFORME PGJ:</option>
-                                    <option>13/ CESTA BASICA:</option>
-                                    <option>14/ FERIAS:</option>
-                                    <option>15/ RESCISAO:</option>
-                                    <option>16/ T. REF. MENSAL:</option>
-                                    <option>17/ T. REF. AVULSO:</option>
-                                    <option>18/ RESCISAO :</option>
-                                    <option>19/ DEV. MENOR APRENDIZ:</option>
-                                    <option>20/ AVISO INDENIZADO:</option>
-
-                                </select>
-                                <button type="submit" class="btn mb-2" id="consultar"
-                                    onclick="return mostrarTabela()"><img src="mais.png" alt=""></button>
+                        <div class="col-md-3 coluna">
+                            <div class="col-md-12" id="botaoAdd">
+                                <button type="submit" class="btn btn-primary glyphicon glyphicon-plus " id="adicionarEvento"></button><br>
                             </div>
                         </div>
-                        <div class="form-group ">
-                            <label for="valor"  class="text-center" style="width: 50%;">
-                                <h5>Valor </h5>
-                            </label>
-                            <input type="number" class="form-control text-center" id="valor" style="width: 50%;" required>
+                        <div class="col-md-12">
+                            <table class="table table-striped" id="tabela_de_eventos">
+                                <thead>
+                                    <tr>
+                                        <th>Evento</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="Valores">
+                                </tbody>
+                            </table>
 
                         </div>
-
-                        <button type="submit" class="btn btn-primary">Gerar Comentario</button>
                     </div>
                 </div>
+                <div id='btn' class="col-md-2 col-md-offset-5 ">
+                    <button type="submit" id="txt" class="btn btn-primary btn-block">Gerar Comentario</button>
+                </div>
+                <div class="col-md-12" id="TXT">
+                    <textarea id="Texto"></textarea>
+                </div>
+            </div>
         </form>
-        <div class="mb-2">
-            <table style="display: none;" class="table table-striped" id="tabela_de_eventos">
-                <thead>
-
-                    <tr>
-                        <th>Evento</th>
-                        <th>Valor</th>
-                    </tr>
-                </thead>
-                <tbody id="Valores">
-
-                </tbody>
-        </div>
-
-
     </div>
+
 </body>
 <script>
-    function mostrarTabela() {
-        var valor = null;
-        valor = document.getElementById('valor').value;
+    $(document).ready(function() {
+        $("#adicionarEvento").click(function() { //Função mostrar Tabela
+            var valor = $("#valor").val();
+            var evento = $("#evento").val();
+            if (valor.length < 1) {
+                alert('Por favor, preencha o campo Valor');
+                document.getElementById("valor").focus();
+                return false
+            } else {
+                $("#tabela_de_eventos").show();
+                var html = $("#Valores").html();
+                html = html + "<tr> <td>" + evento + "</td ><td>" + valor + "</td> </tr > ";
+                $("#Valores").html(html);
 
-        if (document.getElementById("valor").value.length < 1) {
-            alert('Por favor, preencha o campo Valor');
-            document.getElementById("valor").focus();
-            return false
+            }
+        });
+
+        function dataPtBr(data) {
+            var aux = data.split('-');
+            data = aux[2] + '/' + aux[1] + '/' + aux[0];
+            return data;
+
         }
-        else {
-            var evento = document.getElementById('evento').value;
-            document.getElementById('tabela_de_eventos').style.display = '';
-            var html = document.getElementById('Valores').innerHTML;
-            html = html + "<tr> <td>" + evento + "</td ><td>" + valor + "</td> </tr > ";
-            document.getElementById('Valores').innerHTML = html;
-        }
+        $("#txt").click(function() {
+            //var valores = $("#Valores").find('td').toArray();
+            var data = Array();
+            $("#Valores tr").each(function(i, v) {
+                data[i] = Array();
+                $(this).children('td').each(function(ii, vv) {
+                    data[i][ii] = $(this).text();
+                });
+            })
+
+            var numDoc = $("#numeroDoc").val();
+            var codContratante = $("#codContratante").val();
+            var dataVencimento = dataPtBr($("#dataVencimento").val());
+
+            var evento = "";
+            $.each(data, function(i, v) {
+                evento += data[i][0] + " : " + data[i][1] + " | ";
+            })
 
 
+            html = "NUM. DOC.: " + numDoc + " | " + evento + "DT. VENCIMENTO: " + dataVencimento + " | IN RFB N 1.234 de 11/01/2012 - Art 4 - Inciso IV (Vide Art. 3 da IN RFB N 1.663 de 07 de Outubro de 2016). | Liminar INSS 11% - Processo 1.999.38.00.007768-1 transitado e julgado favoravel a ASSPROM Conf. Certidao 23/11/2010. | Registrada no Conselho Nacional de Assistencia Social - CNAS conforme processo N 216.739/77 deferido em 14/07/77. | Renovacao do Cert. CEBAS ref. processo N 71000.055020/2018-1 conforme Port. SNAS 354/2018 Art. 1 Item 17.";
+            $("#Texto").val(html);
 
-
-
-
-    }
-
-
+        });
+    });
+    /* function mostrarTabela() {
+                      var valor = null;
+                      valor = document.getElementById('valor').value;
+ 
+                      if (document.getElementById("valor").value.length < 1) {
+                          alert('Por favor, preencha o campo Valor');
+                          document.getElementById("valor").focus();
+                          return false
+                      }
+                      else {
+                          var evento = document.getElementById('evento').value;
+                          document.getElementById('tabela_de_eventos').style.display = '';
+                          var html = document.getElementById('Valores').innerHTML;
+                          html = html + "<tr> <td>" + evento + "</td ><td>" + valor + "</td> </tr > ";
+                          document.getElementById('Valores').innerHTML = html;
+ 
+                      }
+                  }
+ 
+                  function gerarTxt() {
+                      document.getElementById('TXT').style.display = '';
+ 
+                      var numeroDoc = document.getElementById('numeroDoc').value;
+                      var codContratante = document.getElementById('codContratante').value;
+                      var evento = document.getElementById('evento').value;
+                      var data = document.getElementById('dataVencimento').value;
+                      var valor = document.getElementById('valor').value;
+                      var html = document.getElementById("Texto").innerHTML;
+                      html = html + "NUM. DOC.: " + numeroDoc + " | " + evento+ " : R$ " +valor+" DT. VENCIMENTO: "+data ;
+                      document.getElementById('Texto').innerHTML = html;
+ 
+                  }
+                  function adicionarEvento(){
+ 
+                  }
+              */
 </script>
 
-</html>
+</html>s
