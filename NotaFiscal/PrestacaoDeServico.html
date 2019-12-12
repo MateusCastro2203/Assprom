@@ -8,7 +8,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=0">
 
 
 
@@ -20,7 +21,7 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, user-scalable=0">
+
 </head>
 
 <body>
@@ -38,16 +39,26 @@
         <form class="block" action="#">
             <div class="row justify-content-around block">
                 <div class=" col-md-6 block">
-                    <h5 class="text-center">Numero do Documento</h5>
-                    <input class="caixas form-control" type="number" id="numeroDoc" placeholder="N° do Documento" required>
-                    <small id="emailHelp" class="form-text text-muted "> Digite aqui o numero do
-                        Documento.</small>
-                    <h5 class="text-center">Codigo da Contrante </h5>
-                    <input class="caixas form-control" type="number" id="codContratante" placeholder="Cod da Contratante" required>
-                    <small id="emailHelp" class="form-text text-muted text-center">Digite aqui o Codigo da
-                        Contratante.</small>
-                    <h5 class="text-center">Data de vencimento </h5>
-                    <input type="date" class="caixas form-control" id="dataVencimento" required>
+                    <div class="col-md-8 col-md-offset-2">
+                        <h5 class="text-center">Numero do Documento</h5>
+                        <input class=" form-control" type="number" id="numeroDoc" placeholder="N° do Documento" required>
+
+                        <h5 class="text-center">Codigo da Contrante </h5>
+                        <input class=" form-control" type="number" id="codContratante" placeholder="Cod da Contratante" required>
+
+                        <h5 class="text-center">Data de vencimento </h5>
+                        <input type="date" class=" form-control" id="dataVencimento" required>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2" id="outrasObs">
+                        <h5 class="text-center">Outras observações</h5>
+                        <input type="text" class=" form-control" id="outrasObs">
+                    </div>
+                    <div class="col-md-1 botaoAdd">
+                        <button type="submit" class="btn btn-primary glyphicon glyphicon-plus " id="addObs"></button><br>
+                    </div>
+
+
+
                 </div>
 
                 <div class=" col-md-6 block">
@@ -83,7 +94,7 @@
                             <input type="text" class=" form-control" id="valor" required><br>
                         </div>
                         <div class="col-md-3 coluna">
-                            <div class="col-md-12" id="botaoAdd">
+                            <div class="col-md-12 botaoAdd">
                                 <button type="submit" class="btn btn-primary glyphicon glyphicon-plus " id="adicionarEvento"></button><br>
                             </div>
                         </div>
@@ -106,7 +117,7 @@
                     <button type="submit" id="txt" class="btn btn-primary btn-block">Gerar Comentario</button>
                 </div>
                 <div class="col-md-12" id="TXT">
-                    <textarea id="Texto"></textarea>
+                    <textarea id="Texto" readonly></textarea>
                 </div>
             </div>
         </form>
@@ -161,6 +172,23 @@
             $("#Texto").val(html);
 
         });
+        var max_linha = 5; //numero maximo de inputs
+        var input = $("#outrasObs");
+        var botao = $("#addObs");
+
+        var x = 1; //inicia com uma text box
+        $(botao).click(function(e) { //on add input button click
+            e.preventDefault(); //não fazer o evento default
+            if (x < max_linha) {
+                $(input).append('<input type="text" class=" form-control obsInput" id="outrasObs' + x + '"> '); //add input box
+                x++; //text box increment
+            }
+        });
+
+        var obs = Array();
+        $
+
+
     });
     /* function mostrarTabela() {
                       var valor = null;
@@ -200,4 +228,4 @@
               */
 </script>
 
-</html>s
+</html>
